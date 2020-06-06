@@ -1,14 +1,15 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { client } from "../utils/apollo-client";
-import { App } from "../components/App";
+import { Carte } from "../layouts";
+// import { ThemeProvider } from "@material-ui/core";
+
+// import { scubaTheme } from "../theme";
 
 const IndexPage = () => {
   return (
     <ApolloProvider client={client}>
-      <div className="App">
-        <App />
-      </div>
+      <Carte />
     </ApolloProvider>
   );
 };
