@@ -4,17 +4,14 @@ import { Avatar, CardContent, CardHeader, Typography } from "@material-ui/core";
 
 import { StyledCard, StyledCardMedia } from "./StyledCard";
 
-export const ScubaCard = () => {
+export const ScubaCard = ({ image, avatar, name, state, description }) => {
   return (
     <StyledCard>
-      <StyledCardMedia
-        image="https://images.unsplash.com/photo-1537399959189-32f69acfbe3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=354addb80a3822019442841c011e7d5f&auto=format&fit=crop&w=2134&q=80"
-        title="Contemplative Reptile"
-      />
+      <StyledCardMedia image="https://images.unsplash.com/photo-1537399959189-32f69acfbe3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=354addb80a3822019442841c011e7d5f&auto=format&fit=crop&w=2134&q=80" />
       <CardHeader
         avatar={<Avatar aria-label="Recipe">R</Avatar>}
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={name}
+        subheader={state}
       />
       <CardContent>
         <Typography component="p">
