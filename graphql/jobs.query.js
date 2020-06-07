@@ -1,16 +1,36 @@
 import gql from "graphql-tag";
 
-const GET_SCUBA = gql`
+export const GET_SCUBA = gql`
   {
     scubaCollection {
       items {
+        sys {
+          id
+        }
         name
         state
         users
         visited
+        description
+        imageUrl
+        gravatars
       }
     }
   }
 `;
 
-export default GET_SCUBA;
+export const GET_SCUBA_BY_ID = (id) => {
+  return gql`
+  {
+    scuba(id: "${id}"){
+      name
+      state
+      users
+      visited
+      description
+      imageUrl
+      gravatars
+    }
+  }
+  `;
+};

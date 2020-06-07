@@ -9,10 +9,13 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.55",
     "@reach/router": "^1.2.1",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
+    "clsx": "^1.1.1",
     "emotion": "^10.0.27",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
@@ -21,7 +24,8 @@
     "next-with-apollo": "^5.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0"
   },
   "scripts": {
     "dev": "next",
