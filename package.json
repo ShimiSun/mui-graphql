@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Shimi Shimi",
   "dependencies": {
+    "google-maps-react": "^2.0.6",
     "@apollo/react-hooks": "^3.1.5",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",

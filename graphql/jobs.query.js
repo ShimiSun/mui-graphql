@@ -9,7 +9,6 @@ export const GET_SCUBA = gql`
         }
         name
         state
-        users
         visited
         description
         imageUrl
@@ -25,7 +24,6 @@ export const GET_SCUBA_BY_ID = (id) => {
     scuba(id: "${id}"){
       name
       state
-      users
       visited
       description
       imageUrl

@@ -24,6 +24,7 @@ export const Carte = () => {
                 description={item.description}
                 imageUrl={item.imageUrl}
                 gravatars={item.gravatars}
+                visited={item.visited}
               />
             </Grid>
           ))}

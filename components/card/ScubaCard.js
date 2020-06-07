@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Avatar,
   CardContent,
   CardHeader,
   CardActions,
@@ -9,7 +8,6 @@ import {
   IconButton,
   Typography,
 } from "@material-ui/core";
-import AvatarGroup from "@material-ui/lab/AvatarGroup";
 import { makeStyles } from "@material-ui/core/styles";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -19,6 +17,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import clsx from "clsx";
 
 import { StyledCard, StyledCardMedia } from "./StyledCard";
+import { Gravatar } from "../Gravatar";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -34,23 +33,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AvatarGroupContainer = ({ gravatars }) => {
-  return (
-    <AvatarGroup max={2}>
-      {gravatars.data.map((user) => (
-        <Avatar alt="User" src={user} key={user} />
-      ))}
-    </AvatarGroup>
-  );
-};
-
-const getAvatar = (gravatars) => {
-  if (gravatars && gravatars.data.length > 1) {
-    return <AvatarGroupContainer gravatars={gravatars} />;
-  }
-  return <Avatar aria-label="User" src={gravatars.data[0]} />;
-};
-
 export const ScubaCard = ({
   id,
   imageUrl,
@@ -58,25 +40,26 @@ export const ScubaCard = ({
   name,
   state,
   description,
+  visited,
 }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => setExpanded(!expanded);
-
+  const favoriteIconColor = visited ? { fill: "salmon" } : undefined;
   return (
     <StyledCard>
       <StyledCardMedia image={imageUrl} />
       <CardHeader
-        avatar={gravatars && gravatars.data && getAvatar(gravatars)}
+        avatar={<Gravatar gravatars={gravatars} max={2} />}
         title={name}
         subheader={state}
       />
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <FavoriteIcon style={favoriteIconColor} />
         </IconButton>
         <IconButton aria-label="more info">
-          <Link key="info" href="[id]/" as={id}>
+          <Link key="info" href="/[id]" as={id}>
             <InfoIcon />
           </Link>
         </IconButton>
