@@ -9,7 +9,7 @@ import { Card, CardMedia } from "@material-ui/core";
 //     rgba(40, 42, 162, 0.7707457983193278) 100%
 //   );
 export const StyledCard = styled(Card)`
-  background: linear-gradient(100deg, #1cb5e0 0%, #000851 100%);
+  background: linear-gradient(70deg, #1cb5e0 0%, #000851 100%);
   color: white;
   box-shadow: 0 3px 5px 2px rgba(255, 105, 135, 0.3);
   min-width: 320px;

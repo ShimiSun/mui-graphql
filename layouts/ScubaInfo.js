@@ -45,7 +45,10 @@ export const ScubaInfo = ({ id }) => {
             <Typography component="p">{scubaInfo.description}</Typography>
           </Grid>
           <Grid item xs={12}>
-            <MapContainer />
+            <MapContainer
+              lat={scubaInfo.location.lat}
+              lon={scubaInfo.location.lon}
+            />
           </Grid>
         </Grid>
       )}

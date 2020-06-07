@@ -50,6 +50,7 @@ export const ScubaCard = ({
     <StyledCard>
       <StyledCardMedia image={imageUrl} />
       <CardHeader
+        style={{ color: "white" }}
         avatar={<Gravatar gravatars={gravatars} max={2} />}
         title={name}
         subheader={state}
@@ -59,8 +60,13 @@ export const ScubaCard = ({
           <FavoriteIcon style={favoriteIconColor} />
         </IconButton>
         <IconButton aria-label="more info">
-          <Link key="info" href="/[id]" as={id}>
-            <InfoIcon />
+          <Link key="info" href="/id/[id]" as={`id/${id}`}>
+            <Typography
+              variant="body2"
+              style={{ color: "white", textDecoration: "underline" }}
+            >
+              Learn More
+            </Typography>
           </Link>
         </IconButton>
         <IconButton
@@ -72,7 +78,6 @@ export const ScubaCard = ({
           aria-label="show more"
         >
           <ExpandMoreIcon />
-          <Typography component="p">Learn More</Typography>
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>

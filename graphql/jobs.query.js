@@ -28,7 +28,10 @@ export const GET_SCUBA_BY_ID = (id) => {
       description
       imageUrl
       gravatars
+      location {
+        lat
+        lon
+      }
     }
-  }
-  `;
+  }`;
 };

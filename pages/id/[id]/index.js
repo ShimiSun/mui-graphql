@@ -1,5 +1,5 @@
 import React from "react";
-import { Infra, ScubaInfo } from "../../layouts";
+import { Infra, ScubaInfo } from "../../../layouts";
 
 import { useRouter } from "next/router";
 
