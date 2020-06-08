@@ -2,16 +2,18 @@ import React from "react";
 
 import { Grid } from "@material-ui/core";
 
-import { ScubaCard } from "../components";
-import { getScuba } from "../utils/getScuba";
+import { Error, Footer, Loading, ScubaCard, SubHeader } from "../components";
+import { getScuba, ERRORS, LOADING } from "../utils/queries";
 
 // https://codesandbox.io/s/qxzor?file=/demo.js:1054-1056
 export const Carte = () => {
   const items = getScuba();
-  console.log("items", items);
 
   return (
     <>
+      <SubHeader />
+      {items === ERRORS && <Error />}
+      {items === LOADING && <Loading />}
       <Grid container spacing={3}>
         {items &&
           Array.isArray(items) &&
@@ -29,6 +31,7 @@ export const Carte = () => {
             </Grid>
           ))}
       </Grid>
+      <Footer />
     </>
   );
 };

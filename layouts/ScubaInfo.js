@@ -2,10 +2,10 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Card, CardMedia, Grid, Typography } from "@material-ui/core";
 
-import { Gravatar } from "../components";
+import { Gravatar, Loading, Error } from "../components";
 import MapContainer from "../components/Map";
 
-import { getScubaById } from "../utils/getScuba";
+import { getScubaById, LOADING, ERRORS } from "../utils/queries";
 import { flagsMap } from "../utils/flags";
 
 export const StyledCardMedia = styled(CardMedia)`
@@ -15,10 +15,11 @@ export const StyledCardMedia = styled(CardMedia)`
 // https://codesandbox.io/s/qxzor?file=/demo.js:1054-1056
 export const ScubaInfo = ({ id }) => {
   const scubaInfo = getScubaById(id);
-  console.log("=====> scuba = ", scubaInfo);
 
   return (
     <>
+      {scubaInfo === ERRORS && <Error />}
+      {scubaInfo === LOADING && <Loading />}
       {scubaInfo && typeof scubaInfo !== "string" && (
         <Grid container spacing={3}>
           <Grid item xs={12}>

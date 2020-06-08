@@ -12,7 +12,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import InfoIcon from "@material-ui/icons/Info";
 
 import clsx from "clsx";
 
@@ -46,6 +45,7 @@ export const ScubaCard = ({
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => setExpanded(!expanded);
   const favoriteIconColor = visited ? { fill: "salmon" } : undefined;
+
   return (
     <StyledCard>
       <StyledCardMedia image={imageUrl} />

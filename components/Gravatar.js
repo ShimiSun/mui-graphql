@@ -8,7 +8,7 @@ export const Gravatar = ({ gravatars, max }) => {
   if (gravatars && gravatars.data && gravatars.data.length > 1) {
     return <GravatarGroup gravatars={gravatars} max={max} />;
   }
-  return <Avatar aria-label="User" src={gravatars.data[0]} />;
+  return <Avatar aria-label="User" src={gravatars.data[0]} alt="User" />;
 };
 
 const GravatarGroup = ({ gravatars, max }) => {

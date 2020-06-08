@@ -9,7 +9,7 @@ export const scubaTheme = createMuiTheme({
     },
     secondary: {
       // Soft blue
-      main: "#1cb5e0",
+      main: "#ff8c69",
     },
   },
 });
