@@ -12,6 +12,7 @@ import Link from 'next/link';
 
 import { GiScubaTanks } from 'react-icons/gi';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 // https://codesandbox.io/s/tyr6m?file=/demo.js:0-957
 export const AppHeader = () => {
@@ -33,6 +34,9 @@ export const AppHeader = () => {
           </Typography>
         </Link>
         <div style={{ flex: 'auto' }} />
+        <IconButton href="https://github.com/ShimiSun/mui-graphql" aria-label="show 3 new notifications" color="inherit">
+          <GitHubIcon />
+        </IconButton>
         <Tooltip title="Not supported yet" aria-label="notification">
           <IconButton aria-label="show 3 new notifications" color="inherit">
             <Badge badgeContent={3} color="secondary">

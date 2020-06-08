@@ -1,10 +1,8 @@
-
-
 # ScubaHub
 
 ScubaHub website [![Netlify Status](https://api.netlify.com/api/v1/badges/39e37d4a-4f9f-4946-8aeb-b8328b1821cd/deploy-status)](https://app.netlify.com/sites/keen-mayer-a86c8b/deploys)
 
-A sample application to demonstarte the exploration of new frameworks and tools.
+A sample application to demonstrate the exploration of new frameworks and tools while maintaining a mobile-first and accessible-inclusive UI according to WCAG 2.0 AA.
 ScubaHub demonstrates in a fun & hip way building an end-to-end application with the following:
 
 - Next.JS - Application framework for React
@@ -15,10 +13,11 @@ ScubaHub demonstrates in a fun & hip way building an end-to-end application with
 - Emotion - Isolated component styling
 - Cypress - Integration tests
 - Google Maps API - Integration example (without a developer APIKey)
+- Netlify - website deployment
 
-  And most importantly cool information about Scuba Diving, feel free to dive in and explore.<br>
-  ​<br>
-  <img alt="architecture" width="450px" height="320px" src="https://github.com/ShimiSun/mui-graphql/blob/master/images/architecture.png">
+And most importantly cool information about Scuba Diving, feel free to dive in and explore.<br>
+​<br>
+<img alt="architecture" width="450px" height="320px" src="https://github.com/ShimiSun/mui-graphql/blob/master/images/architecture.png">
 
 ## Installation
 
@@ -50,10 +49,17 @@ This application is supporting Cypress integration tests, this command will open
 ### Deployment
 
 ```
+yarn export
+```
+
+Builds a static HTML export of the Next.JS app, the export creates a `out` folder that could be used for production. The Netlify deployment above currently uses this command to create the distribution folder.
+​
+
+```
 yarn build
 ```
 
-Builds the app for production to the `.next` folder.
+Builds the app for production and locate the distribution files on `.next` folder.
 ​
 
 ### Production

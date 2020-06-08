@@ -31,7 +31,7 @@ export const Carte = () => {
             </Grid>
           ))}
       </Grid>
-      <Footer />
+      {items && Array.isArray(items) && <Footer />}
     </>
   );
 };

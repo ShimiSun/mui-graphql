@@ -6,13 +6,10 @@ export const LOADING = 'loading';
 export const ERRORS = 'errors';
 
 const manageStates = (errors, loading) => {
-  // console.log(data);
-  // console.log(errors);
-  // console.log(loading);
   if (errors) return ERRORS;
   if (loading) return LOADING;
   return 'DATA';
-  // return ERRORS;
+  // return LOADING;
 };
 
 export const getScuba = () => {
