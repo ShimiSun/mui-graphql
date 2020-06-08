@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Grid, Typography } from "@material-ui/core";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Grid, Typography } from '@material-ui/core';
 
 const StyledBox = styled.div`
   background: #000851;
@@ -11,7 +11,7 @@ const StyledBox = styled.div`
 export const Footer = () => {
   return (
     <StyledBox>
-      <Typography style={{ padding: "10px", color: "white" }} variant="body2">
+      <Typography style={{ padding: '10px', color: 'white' }} variant="body2">
         @copyright shimi 2020
       </Typography>
       <Grid item xs={12}>

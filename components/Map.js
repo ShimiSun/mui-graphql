@@ -1,9 +1,11 @@
-import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+/* eslint-disable new-cap */
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const mapStyles = {
-  maxWidth: "980px",
-  height: "100%",
+  maxWidth: '980px',
+  height: '100%',
 };
 
 // https://www.digitalocean.com/community/tutorials/how-to-integrate-the-google-maps-api-into-react-applications
@@ -28,3 +30,15 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
   //   apiKey: "AIzaSyB8aq-iFDGhr4nIKvZ-8GVRtsQZDemFEiE",
 })(MapContainer);
+
+MapContainer.propTypes = {
+  google: PropTypes.any,
+  lat: PropTypes.number,
+  lon: PropTypes.number,
+};
+
+MapContainer.defaultProps = {
+  google: undefined,
+  lat: undefined,
+  lon: undefined,
+};

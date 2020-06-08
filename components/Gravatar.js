@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { AvatarGroup } from "@material-ui/lab";
-import { Avatar } from "@material-ui/core";
+import { AvatarGroup } from '@material-ui/lab';
+import { Avatar } from '@material-ui/core';
 
 export const Gravatar = ({ gravatars, max }) => {
   if (!gravatars || !gravatars.data) return null;
@@ -19,4 +20,24 @@ const GravatarGroup = ({ gravatars, max }) => {
       ))}
     </AvatarGroup>
   );
+};
+
+GravatarGroup.propTypes = {
+  gravatars: PropTypes.object,
+  max: PropTypes.number,
+};
+
+GravatarGroup.defaultProps = {
+  gravatars: undefined,
+  max: undefined,
+};
+
+Gravatar.propTypes = {
+  gravatars: PropTypes.object,
+  max: PropTypes.number,
+};
+
+Gravatar.defaultProps = {
+  gravatars: undefined,
+  max: undefined,
 };

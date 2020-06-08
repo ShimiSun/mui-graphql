@@ -1,5 +1,5 @@
-import React from "react";
-import { Carte, Infra } from "../layouts";
+import React from 'react';
+import { Carte, Infra } from '../layouts';
 
 const IndexPage = () => {
   return (

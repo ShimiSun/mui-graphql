@@ -32,10 +32,19 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "devDependencies": {
     "cypress": "^4.7.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.21.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^2.0.5"
   }
 }

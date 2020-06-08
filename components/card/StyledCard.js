@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Card, CardMedia } from "@material-ui/core";
+import styled from '@emotion/styled';
+import { Card, CardMedia } from '@material-ui/core';
 
 // https://codesandbox.io/s/0o7zynrjqw?file=/EmotionButton.js
 // https://cssgradient.io/

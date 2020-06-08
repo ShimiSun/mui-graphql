@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export const GET_SCUBA = gql`
   {
@@ -18,7 +18,7 @@ export const GET_SCUBA = gql`
   }
 `;
 
-export const GET_SCUBA_BY_ID = (id) => {
+export const getScubaInfoById = (id) => {
   return gql`
   {
     scuba(id: "${id}"){

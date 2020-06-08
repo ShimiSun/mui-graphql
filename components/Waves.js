@@ -1,7 +1,8 @@
-import React from "react";
+/* eslint-disable max-len */
+import React from 'react';
 
 export const Waves = () => (
-  <div style={{ maxHeight: "200px" }}>
+  <div style={{ maxHeight: '200px' }}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#a2d9ff"

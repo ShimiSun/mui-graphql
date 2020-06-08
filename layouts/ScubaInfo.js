@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Card, CardMedia, Grid, Typography } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+import { Card, CardMedia, Grid, Typography } from '@material-ui/core';
 
-import { Gravatar, Loading, Error } from "../components";
-import MapContainer from "../components/Map";
+import { Gravatar, Loading, Error } from '../components';
+import MapContainer from '../components/Map';
 
-import { getScubaById, LOADING, ERRORS } from "../utils/queries";
-import { flagsMap } from "../utils/flags";
+import { getScubaById, LOADING, ERRORS } from '../utils/queries';
+import { flagsMap } from '../utils/flags';
 
 export const StyledCardMedia = styled(CardMedia)`
   height: 520px;
@@ -20,7 +21,7 @@ export const ScubaInfo = ({ id }) => {
     <>
       {scubaInfo === ERRORS && <Error />}
       {scubaInfo === LOADING && <Loading />}
-      {scubaInfo && typeof scubaInfo !== "string" && (
+      {scubaInfo && typeof scubaInfo !== 'string' && (
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Card>
@@ -28,13 +29,13 @@ export const ScubaInfo = ({ id }) => {
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <Typography style={{ fontFamily: "Comic Sans MS" }} variant="h1">
+            <Typography style={{ fontFamily: 'Comic Sans MS' }} variant="h1">
               {flagsMap[scubaInfo.state]}
             </Typography>
-            <Typography style={{ fontFamily: "Comic Sans MS" }} variant="h2">
+            <Typography style={{ fontFamily: 'Comic Sans MS' }} variant="h2">
               {scubaInfo.name}
             </Typography>
-            <Typography style={{ fontFamily: "Comic Sans MS" }} variant="h3">
+            <Typography style={{ fontFamily: 'Comic Sans MS' }} variant="h3">
               {scubaInfo.state}
             </Typography>
           </Grid>
@@ -55,4 +56,12 @@ export const ScubaInfo = ({ id }) => {
       )}
     </>
   );
+};
+
+ScubaInfo.propTypes = {
+  id: PropTypes.string,
+};
+
+ScubaInfo.defaultProps = {
+  id: undefined,
 };

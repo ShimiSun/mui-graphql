@@ -1,5 +1,6 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 import {
   CardContent,
   CardHeader,
@@ -7,28 +8,28 @@ import {
   Collapse,
   IconButton,
   Typography,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import { StyledCard, StyledCardMedia } from "./StyledCard";
-import { Gravatar } from "../Gravatar";
+import { StyledCard, StyledCardMedia } from './StyledCard';
+import { Gravatar } from '../Gravatar';
 
 const useStyles = makeStyles((theme) => ({
   expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
-    color: "white",
+    color: 'white',
   },
   expandOpen: {
-    transform: "rotate(180deg)",
+    transform: 'rotate(180deg)',
   },
 }));
 
@@ -44,13 +45,13 @@ export const ScubaCard = ({
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => setExpanded(!expanded);
-  const favoriteIconColor = visited ? { fill: "salmon" } : undefined;
+  const favoriteIconColor = visited ? { fill: 'salmon' } : undefined;
 
   return (
     <StyledCard>
       <StyledCardMedia image={imageUrl} />
       <CardHeader
-        style={{ color: "white" }}
+        style={{ color: 'white' }}
         avatar={<Gravatar gravatars={gravatars} max={2} />}
         title={name}
         subheader={state}
@@ -63,7 +64,7 @@ export const ScubaCard = ({
           <Link key="info" href="/id/[id]" as={`id/${id}`}>
             <Typography
               variant="body2"
-              style={{ color: "white", textDecoration: "underline" }}
+              style={{ color: 'white', textDecoration: 'underline' }}
             >
               Learn More
             </Typography>
@@ -87,4 +88,24 @@ export const ScubaCard = ({
       </Collapse>
     </StyledCard>
   );
+};
+
+ScubaCard.propTypes = {
+  id: PropTypes.string,
+  imageUrl: PropTypes.string,
+  name: PropTypes.string,
+  state: PropTypes.string,
+  description: PropTypes.string,
+  gravatars: PropTypes.object,
+  visited: PropTypes.bool,
+};
+
+ScubaCard.defaultProps = {
+  id: undefined,
+  imageUrl: undefined,
+  gravatars: undefined,
+  name: undefined,
+  state: undefined,
+  description: undefined,
+  visited: undefined,
 };
