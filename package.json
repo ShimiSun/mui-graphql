@@ -20,7 +20,6 @@
     "google-maps-react": "^2.0.6",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
-    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.4.4",
     "next-with-apollo": "^5.0.1",
     "prop-types": "^15.7.2",
@@ -31,6 +30,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "yarn build && next export",
     "start": "next start",
     "cypress:open": "cypress open",
     "lint": "eslint .",
