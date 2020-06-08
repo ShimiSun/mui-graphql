@@ -1,4 +1,8 @@
+
+
 # ScubaHub
+
+ScubaHub website [![Netlify Status](https://api.netlify.com/api/v1/badges/39e37d4a-4f9f-4946-8aeb-b8328b1821cd/deploy-status)](https://app.netlify.com/sites/keen-mayer-a86c8b/deploys)
 
 A sample application to demonstarte the exploration of new frameworks and tools.
 ScubaHub demonstrates in a fun & hip way building an end-to-end application with the following:
